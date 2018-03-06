@@ -17,8 +17,21 @@
     		// set the PDO error mode to exception
     		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     		echo "Connected successfully"; 
+			
+			    // prepare sql and bind parameters
+    		$stmt = $conn->prepare("INSERT INTO wdv341_event (event_name) 
+    		VALUES (:event_name)");
+    		$stmt->bindParam(':event_name', $event_name);
+    		//$stmt->bindParam(':event_description', $event_description);
+    		//$stmt->bindParam(':event_presenter', $event_presenter);
+
+    		// insert a row
+    		$event_name = "Army Day";
+    		//$event_description = "A day to remember ";
+    		//$email = "john@example.com";
+    		$stmt->execute();
     		}
-		catch(PDOException $e)
+			catch(PDOException $e)
     		{
     		echo "Connection failed: " . $e->getMessage();
     		}
