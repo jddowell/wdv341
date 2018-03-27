@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WDV221 Intro Javascript Form Processing</title>
+	<script>
+	
+		function showProduct()
+		{
+			//alert("inside of showProduct");
+			document.getElementById("textfield").value = "Army PT Pants";
+		}
+		
+		function displayTextfield()
+		{
+			document.getElementById("textarea").value = "Your opnion matters to us!";
+		}
+		
+		function choseFloor()
+		{
+			//alert("inside choseFloor()");
+			if(document.getElementById("highLevel").checked)
+				{
+					alert("You have selected high level");
+				}
+			if(document.getElementById("midLevel").checked)
+				{
+					alert("You have selected mid level!");
+				}
+			if(document.getElementById("lowLevel").checked)
+				{
+					alert("You have selected low level!");
+				}
+		}
+		
+		function computers()
+		{
+			if(document.getElementById("checkbox").checked)
+				{
+					alert("SO YOU LIKE WORKING ON COMPUTERS!");
+				}
+		}
+		function showHiddenField() 
+		{
+			//alert("inside showHiddenField");
+    		var x = document.getElementById("hiddenField").value;
+    		document.getElementById("showHidden").innerHTML = x;
+		}
+		
+		function showCourse()
+		{
+			//alert("inside of showState()");
+			var courseList = document.getElementById("select");
+			var x = document.getElementById("select").selectedIndex;		
+			
+			alert("Index: " + courseList[x].index + " is " + courseList[x].text);
+		}
+	</script>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h2>Form Processing - Homework</h2>
+<h3>Instructions:</h3>
+<p>Use the following form. For each of the following form elements:</p>
+<ol>
+  <li>Create a function that will display the current value of the element. Use the indicated event  to run the function.</li>
+  <li>Create a function that will set the element to a different value. Use an event of your choice to run this function. </li>
+  <li>For the hidden field create a function that will set it to a value of &quot;WDV221 Intro Javascript&quot;.</li>
+  <li>For the hidden field create a function that will will display its current value. </li>
+  <li>For the Drop Down list create a function that will display the index, value and text of the selected option.</li>
+</ol>
+<p>&nbsp;</p>
+<form name="form1" method="post" action="http://jhgullion.org/wdv341/displayDate.php">
+  <p>
+    <label>Product Number
+      <input type="text" name="textfield" id="textfield">
+    </label>
+   <input type="button" value="Show Product" onClick="showProduct()"></p>
+  <p>Please let us know how we performed:  </p>
+  <p>
+    <label>
+      <textarea name="textarea" id="textarea"></textarea>
+    </label>
+    <input type="button" value="Display Message" onClick="displayTextfield()"></p>
+  <p>Choose Your Floor Preference:
+  <table width="200">
+    <tr>
+      <td><label>
+        <input type="radio" name="RadioGroup1" value="floor" id="highLevel" onChange="choseFloor()">
+        High Level</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="RadioGroup1" value="floor" id="midLevel" onChange="choseFloor()">
+        Mid Level</label></td>
+    </tr>
+    <tr>
+      <td><label>
+        <input type="radio" name="RadioGroup1" value="floor" id="lowLevel" onChange="choseFloor()">
+        Low Level</label></td>
+    </tr>
+  </table>
+  </p>
+  <p>Please Check All that Apply: <em>Change Event</em></p>
+  <p>
+    <label>
+      <input type="checkbox" name="checkbox" id="checkbox" onChange="computers()">
+      I like working with computers</label>
+  </p>
+  <p>
+    <label>Image File to Upload
+  <input type="file" name="pic" accept="image/*">
+  <input type="submit">
+    </label>
+  <p>
+    There is a hidden field right here: 
+    <input type="hidden" name="hiddenField" id="hiddenField" value="WDV221 Intro Javascrip">
+	</p>
+	<p id="showHidden"></p>
+	<p>
+  <em>Click Event 3. and 4.</em><input type="button" value="Show hidden Value" onClick="showHiddenField()"></p>
+  <p>
+    <label>Please Select Your Favorite Class
+      <select name="select" id="select">
+        <option value="WDV101">HTML</option>
+        <option value="WDV205">CSS</option>
+        <option value="WDV151">Web Design</option>
+        <option value="WDV221">Javascript</option>
+      </select>
+    </label>
+    <em>Change Event. 5.</em></p>
+  <p>Submit
+    <input type="button" name="button" id="button" value="Show Course" onClick="showCourse()">
+Click Event</p>
+  <p>Reset
+    <input type="reset" name="button2" id="button2" value="Reset">
+  </p>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

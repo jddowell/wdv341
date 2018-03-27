@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Event Handler</title>
+<style type="text/css">
+	body{
+		background-color: beige;
+	}	
+</style>
+<script>
+
+	function onClick(){
+		alert("Justin Dowell"); //Uses onClick event
+	}
+	
+	function normalImage(x){
+		x.style.height = "40px"; //Uses onMouseOut event
+		x.style.width = "40px";
+	}
+	
+	function bigImage(x){
+		x.style.height = "100px"; //Uses onMouseOver event
+		x.style.width = "100px";
+	}
+	
+	function upperColor(){
+		var color = document.getElementById("favoriteColor"); //Uses onChange event
+		color.value = color.value.toUpperCase();
+	}
+	
+	function titleClass(){
+		alert("Intro to Javacript is the best!") //Uses onLoad event
+	}
+
+</script>
+</head>
+
+<body onLoad="titleClass()">
+<h1>Display Best Name Ever!</h1>
+<button onClick="onClick()">Display Cool Name</button>
+<h1>Hoover over image to make bigger!</h1>
+<img onMouseOver="bigImage(this)" onMouseOut="normalImage(this)" src="swiss-army-knife-154314_1280.png" height="40px" width="40px">
+<p>Enter your favorite color: <input type="text" id="favoriteColor" onChange="upperColor()"></p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Variables and Data Types Assignment</title>
+
+<style>
+
+body {background-color:#FC6;
+}
+
+.highlightTitle	{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-style:italic;
+	font-size:14px;
+	text-decoration:underline;
+	color:#096;
+}
+
+
+</style>
+<script>
+	var color1 = "Green"; //definding a string global variable
+	var color2 = "Red";	//definding a string global variable
+	var color3 = "White";	//definding a string global variable
+	var color4 = "Blue";	//definding a string global variable
+	
+	function getColor()
+	{
+		var color5; // definding a local variable
+		color5 = prompt("Enter Your Faovorite Color:");
+		console.log("Your Favorite Color is: " + color5);
+	}
+	function displayColor()
+	{
+		alert(color1+" "+color2+" "+color3+" "+color4);//The variable color5 cannot not be displayed because it is a local variable.
+	}
+</script>
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Variables and Data Types - Variables Assignment</h3>
+<hr />
+<p>Please complete the following exercises on this page. When complete post this page to your  server. Make a link in your WDV221 homework  page for this assignment. </p>
+<p>Include a comment in each script with the exercise number and a description of what the script is supposed to do.</p>
+<p>Using Blackboard submit this  Assignment.</p>
+<h3>For each exercise use a comment line to put the Exercise number within the script. Also place a short description of what the script is doing.</h3>
+<hr />
+<p>1. Define four global variables called color1 through color4. Assign the variables a color.</p>
+<p>2. Create a function called getColor( ).    Create a local variable called color5.</p>
+<p>3. In the getColor( ) use the prompt( ) to ask the user for a color. Store this value in the color5 variable. Use a button with an onclick event handler to activate this function.</p>
+<p><input type="button" value="Enter Color" onClick="getColor()"></p>
+<p>4. Create a function called displayColors( ). Use the alert( ) to display all the color variables and their associated value. Use a button with an onclick event handler to activate this function.</p>
+<p><input type="button" value="Display Colors" onClick="displayColor()"></p>
+<p>5. In your comments address why color5 cannot be displayed by the displayColors( ) function. </p>
+</body>
+</html>

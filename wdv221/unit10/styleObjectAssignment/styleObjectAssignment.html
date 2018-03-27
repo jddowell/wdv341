@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Style Object-CSS Interactions In Class Exercises</title>
+<style type="text/css">
+<!--
+.style1 {color: #FF0000}
+	p{
+		font-family: "Times New Roman", Times, serif;
+	}
+-->
+</style>
+
+<script>
+	//change font color to red
+	function changeRed()
+	{
+		document.getElementById("para1").style.color = 'red';
+	}
+	//align header to center
+	function alignCenter()
+	{
+		document.getElementById("header3").style.textAlign = 'center';
+	}
+	//align header back to original position
+	function centerLeft()
+	{
+		//alert("inside alignLeft()");
+		document.getElementById("header3").style.textAlign = 'left';
+	}
+	//change font style
+	function changeFont()
+	{
+		document.getElementById("para4").style.fontFamily = "Impact,Charcoal,sans-serif";
+	}
+	//change font back to original
+	function changeFontBack()
+	{
+		//alert("inside changeFontBack()");
+		document.getElementById("para4").style.fontFamily = '"Times New Roman", Times, serif';
+	}
+	//change font size
+	function changeFontSize()
+	{
+		document.getElementById("sale").style.fontSize = "24px";
+	}
+	//change font size back
+	function changeFontSizeBack()
+	{
+		document.getElementById("sale").style.fontSize = "12px";
+	}
+	//changes background to yellow
+	function changeBackground()
+	{
+		document.getElementById("para8").style.backgroundColor = "yellow";
+	}
+	//hides image
+	function hideImage()
+	{
+		document.getElementById("image").style.visibility = "hidden";
+	}
+	//image shows back up
+	function showImage()
+	{
+		document.getElementById("image").style.visibility = "visible";
+	}
+	//double image in size
+	function bigImg()
+	{
+		document.getElementById("image").style.width = "200px";
+		document.getElementById("image").style.height = "200px";
+	}
+	//adjusts image back to original size
+	function normalImg()
+	{
+		document.getElementById("image").style.width = "100px";
+		document.getElementById("image").style.height = "100px";
+	}
+	//places border around paragraph
+	function borderPara()
+	{
+		document.getElementById("para13").style.border = "thick solid green";
+	}
+	//removes border
+	function noBorder()
+	{
+		document.getElementById("para13").style.border = "none";
+	}
+	//sets background to green
+	function greenBackground()
+	{
+		document.getElementById("para15").style.backgroundColor = "green";
+	}
+	//sets background to white
+	function whiteBackground()
+	{
+		document.getElementById("para15").style.backgroundColor = "white";
+	}
+</script>
+</head>
+
+<body>
+<h1>WDV221 Intro Javascript</h1>
+<h3 id="header3">Style Object - CSS Interactions - In Class Exercises</h3>
+<p>Please modify this page to create the following Dynamic HMTL effects. </p>
+<p id="para1" onClick="changeRed()">1. Click this paragraph to change the font color to red.</p>
+<p onMouseOver="alignCenter()">2. Mousever this paragraph to center the H3 element containing &quot;CSS Interactions&quot;.</p>
+<p>3. Click the button to left align the H3 element. </p>
+<p>
+  <label>
+  <input type="button" name="button" id="button" value="Align Center" onClick="centerLeft()" />
+  </label>
+</p>
+	<p id="para4" onMouseOver="changeFont()">4. Mouseover this paragraph to change the font to a font of you choice.</p>
+	<p onClick="changeFontBack()">5. Click on this paragraph to return the font to the default font.</p>
+	<p>6. Click on the button to make the word <span id="sale">SALE</span> font size 24. </p>
+<p>
+  <label>
+  <input type="button" name="button2" id="button2" value="Change Font Size" onClick="changeFontSize()" />
+  </label>
+</p>
+<p>7. Click on the button to return the word to its original size.</p>
+<p>
+  <label>
+    <input type="button" name="button3" id="button3" value="Change Font Size Back" onClick="changeFontSizeBack()" />
+  </label>
+</p>
+<p id="para8" onMouseOver="changeBackground()">8. Use an eventhandler of your choice on this paragraph to make the paragraph background color yellow. </p>
+<p onClick="hideImage()">9. Use an onclick event to hide the Frog image shown below.</p>
+<p>10. Use the following button to make the Frog image shown below reappear.</p>
+<p>
+  <input type="button" name="button4" id="button4" value="Show Image" onClick="showImage()" />
+</p>
+<p>11. Mouseover the Frong image to make its height and width double its original size. </p>
+<p><img  id="image" src="frog.jpg" width="100" height="100" alt=""  onMouseOver="bigImg()"/></p>
+<p onMouseOut="normalImg()">12. Use a click event on the Frog image to make it return to original size. </p>
+<p id="para13" onDblClick="borderPara()">13. Doubleclick on this paragraph to place a border around this paragraph.</p>
+<p onMouseOver="noBorder()">14. Use an event handler of your choice to remove the border from the previous paragraph. </p>
+<p id="para15" onMouseOver="greenBackground()" onMouseOut="whiteBackground()">15. Mouseover this paragraph to turn its background color to green. When you mouseoff the paragraph return it to its normal color. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

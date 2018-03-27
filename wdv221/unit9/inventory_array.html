@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Array Lookup</title>
+<style type="text/css">
+	body{
+		text-align: center;
+	}	
+	
+</style>
+<script>
+
+	var products = ["pen", "paper", "pencil"]; //
+	
+	var inventory = [0,0,0]; //object oraniated array
+	
+	var list = document.getElementById("productlist");
+	function findProduct()
+	{
+		//alert("inside findProduct()")
+		var inputProduct = document.getElementById("inName").value;
+		
+		
+		var indexOfProduct = products.indexOf(inputProduct);
+		
+		if(indexOfProduct >=0)
+			{
+				alert("Found " + inputProduct);
+				//add the quantity input in the inventory array at the same row
+				inventory[indexOfProduct] += parseInt(document.getElementById("inQuantity").value);
+				//console.log(inventory);
+				alert(inventory);
+			}
+		else
+			{
+				alert(inputProduct + "is not in list")
+			}
+	}
+	
+</script>
+</head>
+
+<body>
+	<h1>WDV221 Intro Javascript</h1>
+	<h2>Array Lookup and Accumulate Example</h2>
+	<p>List of all products:</p>
+	<p>
+	<select id="productlist">
+	<script>
+		for(var x=0; x < products.length; x++)
+			{
+				document.write("<option>" + products[x] + "</option>");
+			}
+	
+	</script>
+	</select>
+</p>
+	<p>Enter Product <input type="text" id="inName"></p>
+	<p>Enter Quantity <input type="text" id="inQuantity"></p>
+	<button onClick="findProduct()">Find Product</button>
+</body>
+</html>

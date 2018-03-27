@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Functions</title>
+
+<script>
+
+
+	
+	function characterCount()
+	{
+		nameLength = prompt("What is your first name: ");
+		alert("Your name length is: "+nameLength.length);
+	}
+	
+	function printName(firstName,lastName)
+	{
+		firstName = prompt("What is your first name: ");
+		lastName = prompt("What is your last name: ");
+		name = (firstName+" "+lastName);
+		document.write("Your name is: "+name);
+	}
+	function returnCharacterCount(nameLength)
+	{
+		//alert("Inside of return");
+		return nameLength.length;
+	}
+	function upperCaseName(nameUpperCase){
+		nameUpperCase = prompt("What is Your Name");
+		return nameUpperCase.toUpperCase();
+	}
+	
+</script>
+</head>
+
+<body>
+<h1>Want to know how long your first name is click below!</h1>
+<button onClick="characterCount()">Name Length</button>
+<h1>Join your name together!</h1>
+<button onClick="printName()">Display Name</button>
+<h1>The Length of Justin Is Below!</h1>
+<p>Length of your first name is: <script>document.write(returnCharacterCount("Justin"));</script></p>
+<h2>Your Name in Upper Case: <script>document.write(upperCaseName());</script></h2>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV221 Intro Javascript - Calculations and Textfields</title>
+	<script>
+	
+		var accountBalance = 0;
+		
+/*	function dollarFormat(valuein) {
+
+    var formatStr=" "
+
+    var Outdollars=" "
+
+    var decipos=valuein.indexOf(".")
+
+    if (decipos==-1) {
+      decipos=valuein.length
+    }
+    var dollars=valuein.substring(0,decipos)
+    var dollen=dollars.length
+    if (dollen>3) {
+      while (dollen>0) {
+        tDollars=dollars.substring(dollen-3,dollen)
+          if (tDollars.length==3) {
+            Outdollars=","+tDollars+Outdollars
+            dollen=dollen-3
+          }
+          else {
+            Outdollars=tDollars+Outdollars
+            dollen=0
+          }
+      }
+      if (Outdollars.substring(0,1)==".") {
+        dollars=Outdollars.substring(1,Outdollars.length)
+      }
+      else {
+        dollars=Outdollars
+      }
+    }
+    var cents=valuein.substring(decipos+1,decipos+3)
+    if (cents=="") {
+      cents="00"
+    }
+    if (cents.length == 1) {
+      cents = cents+"0"
+    }
+    var formatStr="$"+dollars+"."+cents
+
+    return formatStr
+  }//end of dollarFormat()*/
+		      function testFormat(inNum) {
+            //alert("inside testFormat()");
+            if (isNaN(inNum)) {
+                //alert("result of isNaN" );   //The input amount is a non numeric string. It is or contains letters and/or spaces
+                return false;
+            }
+            else {
+                inNum = parseFloat(inNum);		//Convert input value into a floating point number.  toFixed() requires a number value to work with
+                return '$' + inNum.toFixed(2).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+            }
+        }
+
+
+		
+		function displayBalance(){
+			//alert("inside displayBalance()");	
+			if(accountBalance < 0)
+				{
+					alert("YOUR ACCOUNT IS OVER DRAFT");
+					document.getElementById("totalBalance").innerHTML=testFormat(accountBalance);
+				}
+			else
+				{
+					document.getElementById("totalBalance").innerHTML=testFormat(accountBalance);				
+				}
+						//alert("inside testFormat()");
+		}
+		
+		function deposit(){
+			//alert("inside deposit()");
+			var currentDeposit = parseFloat(document.getElementById("inAmt").value);
+			
+			accountBalance += currentDeposit;
+		}
+		
+		function currentWithdraw(){
+			//alert("inside withdraw()");
+			
+			var currentWithdraw = parseFloat(document.getElementById("inAmt").value);
+			
+			accountBalance -= currentWithdraw;
+		}
+	
+		function resetForm(){
+			accountBalance = 0;
+			document.getElementById("totalBalance").innerHTML="";
+		}
+		
+	</script>
+
+<style>
+
+body {background-color:#C99;
+}
+
+</style>
+</head>
+
+<body>
+<h2>WDV221 Intro Javascript</h2>
+<h3>Project 3 - Calculations and Textfields </h3>
+<h3>Create an electronic Checkbook</h3>
+<p>In this project you are going to create an electronic checkbook using Javascript. You can add amounts and withdraw amounts from your current balance. </p>
+<form id="form2" name="form2" method="post" action="">
+  <p>
+    Enter an amount: 
+    <input type="text" name="inAmt" id="inAmt" />
+  </p>
+  <p>
+    <input type="button" name="button3" id="button3" value="Deposit" onClick="deposit()" />
+    <input type="button" name="button4" id="button4" value="Withdraw" onClick="currentWithdraw()" />
+    <input type="button" name="button5" id="button5" value="Display Balance" onClick="displayBalance()" />
+  </p>
+  <p>Balance:<span id="totalBalance"></span></p>
+  <p>
+    <input type="reset" name="button2" id="button2" value="Reset" onClick="resetForm()" />
+  </p>
+</form>
+<p>Instructions:</p>
+<p>1. Create a global variable called accountBalance. Initialize it to 0. </p>
+<p>2. Create a deposit function that will process a deposit to the account. This will add the amount entered in the Amount field to the accountBalance. </p>
+<p>3. Create a withdraw function that will process a withdrawl from the account. This will subtract the amount entered in the Amount field from the accountBalance.</p>
+<p>3. Create a displayBalance function that will display the current value of accountBalance in the Balance field.</p>
+<p>4. Use the combined operators for the deposit and withdraw processes. </p>
+<p>5. Use parseInt( ) or parseFloat( ) as needed.</p>
+
+<p>6. Format the balance amount to show as currency.</p>
+<p>Extra Credit: Validate the input fields to ensure the user enters a number.</p>
+</body>
+</html>
