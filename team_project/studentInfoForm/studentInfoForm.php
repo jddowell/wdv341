@@ -119,10 +119,13 @@
 		{
 			global $validForm, $linkinError;
 			//echo("here".$linkedin.strpos($linkedin , "linkedin.com"));
-			if(!strstr($linkedin , "linkedin.com"))
+			if($linkedin != "")
 			{
-				$validForm = false;
-				$linkinError = "not correct linkedin URL";
+				if(!strstr($linkedin , "linkedin.com"))
+				{
+					$validForm = false;
+					$linkinError = "not correct linkedin URL";
+			}
 			}
 		}
 		function validateEmail($inEmail)
@@ -158,8 +161,9 @@
 				global $validForm, $careerGoalsError;	
 				$careerGoalsError = "";
 				
-				if(empty($career))
+				if(strlen(trim($career)) == 0)
 				{
+					echo "inside";
 					$validForm = false;
 					$careerGoalsError = "Name cannot be spaces";
 				}
@@ -169,7 +173,7 @@
 				global $validForm, $threeWordsError;	
 				$threeWordsError = "";
 				
-				if($words == "")
+				if(empty($words))
 				{
 					$validForm = false;
 					$threeWordsError = "Name cannot be spaces";
@@ -341,6 +345,7 @@ validateThreeWords
 	}
 	.error{
 		font-style: italic;
+		font-size: 18px;
 		color: #d42a58;
 		font-weight: bold;
 	}
@@ -423,7 +428,7 @@ validateThreeWords
 			</select><br><span class="error" id="programError"><?php echo($programError);?></span><td>
 		</tr>
 		<tr>
-		<td >Secondary Program:<br> <select id="program2" name="program2">
+		<td >Secondary Program:<br> <select id="program2" name="program2"</selec>>
 				<option value="none" >---No Secondary Program---</option>
 				<option value="animation" >Animation</option>
 				<option value="graphicDesign" >Graphic Design</option>
@@ -461,7 +466,7 @@ validateThreeWords
 		<td><input type="submit" id="submitBio" name="submit" value="Submit Bio" /></td>
 		</tr>
 		<tr>
-		<td><input type="reset" id="resetBio" name="resetBio" value="Reset Bio"/></td>
+		<td><input type="reset" id="resetBio" name="resetBio" value="Reset Bio" onClick="resetForm()" /></td>
 		</tr>
 		</table>
 	</form>
