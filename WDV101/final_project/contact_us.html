@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<!-- Name: Justin Dowell
+	 Date: 04/17/2017-->
+	 <meta name="Description" content="How do you contact Felix's coffee shop St. Paul, Minnesota"/>
+	 <meta name="Keywords" content="contact Felix's coffee shop, coplaints, concern, ordering online"/>
+<meta charset="utf-8">
+<title>Contact Us</title>
+<style type="text/css">
+	#formcontainer{
+		width: 500px;
+		margin: 50px 400px;
+	}
+	form{
+		background-color: #5B4611;
+		border: 4px solid orange;
+		padding: 0.5em;
+		color: orangered;
+	}
+	.labelfloatleft label{
+		width: 100px;
+		margin-right: 15px;
+		padding-top: 2px;
+		float: left;
+		text-align: right;
+	}
+	.labelfloatleft input{
+		display: block;
+		padding: 2px;
+		margin-bottom: 2px;
+	}
+	label.clear{
+		clear: left;
+		
+	}
+	.right{
+		float: right;
+		margin-right: 15px;
+	}
+	select{
+		float: left;
+	}
+	input{
+		display: inline;
+	}
+	label.left{
+		float: left;
+		padding-right: 5px;
+	}
+	</style>
+<link href="coffee_shop.css" rel="stylesheet" type="text/css"/>
+</head>
+	<table>
+    <tr>
+     <td><a href="coffe_shop.html">Home</a></td>
+      <td><a href="menu.html">Menu</a></td>
+      <td><a href="events.html">Events</a></td>
+      <td><a href="about_us.html">About Us</a></td>
+      <td><a href="contact_us.html">Contact Us</a></td>
+    </tr>
+	</table>
+<div id="formcontainer">
+<form name="contact" method="post" action="formHandler.php">
+<fieldset class = "labelfloatleft">
+<legend>Contact Information</legend>
+	<label for = "firstname">First Name</label>
+	<input type="text" name="first_name" size="40"/>
+	
+	<label for="lastname">Last Name</label>
+	<input type="text" name="last_name" size="40"/>
+	
+	<label for="telephone">Phone Number</label>
+	<input type="text" name="telephone" size="12"/>
+	
+	<label for="email">Email</label>
+	<input type="text" name="email" size="40" placeholder = "name@anywhere.com"/>
+	
+	<p><label for="comments">Comments</label></p>
+	<textarea name="comments" id="comments" rows="10" cols="45" class="right" placeholder="Type order or concern here..."></textarea>
+	
+	</fieldset>
+	<fieldset>
+			
+	<label>How Should We Contact You?</label>
+	<input type="radio" name="contact" value="email"/>
+	<label>Email</label>
+	<input type="radio" name="contact" value="phone"/>
+	<label>Phone</label>
+	</fieldset>
+	<fieldset>
+	<label for="reason" class="left">Reason For Contact</label>
+	<select name="reason">
+		<option value="" selected disabled>Select Opion</option>
+		<option value="concern">Concern</option>
+		<option value="order_online">Order Online</option>
+	</select>
+	</fieldset>
+	<input type="submit" value="Submit Your Order" class="button"/>
+	<input type="reset" value="Reset" class="button"/>
+</form>
+	
+</div>
+<body>
+</body>
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: beige;
+}
+h1{
+	color: navy;
+	text-align: center;
+}
+
+ul li{
+	list-style: square;
+}
+
+.footer{
+	text-align: center;
+	color: navy;
+}
+
+a:link {color: green;}
+
+a:visted {color: red;}
+
+nav {color: white;
+	background-color: black;}
+
+nav a:link {
+	color: white;
+	text-decoration: none;
+}
+
+nav a:visited {
+	color: yellow;
+	text-decoration: none;
+}

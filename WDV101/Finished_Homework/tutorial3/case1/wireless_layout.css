@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* Name: Justin Dowell
+   Date: 02/08/2017*/
+
+body{font-size: 1.2em;
+	 font-family: sans-serif;
+	background-color: #e6e6fa;
+}
+
+em{color: green;
+    font-style: bold;
+}
+
+h3{
+	color: maroon;
+	text-transform: uppercase;
+	text-align: right;
+	font-size: 1.3em;
+	font-family:"Times New Roman", Times, serif;
+}

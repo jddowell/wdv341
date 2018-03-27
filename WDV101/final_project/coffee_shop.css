@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-image: url(images/coffee_background.jpg);
+}
+table{
+	width: 40%;
+	margin: 0 auto;
+	text-align: center;
+	border: solid 4px orange;
+	border-collapse: collapse;
+	font-size: 2em;
+	background-color: #5B4611;
+}
+
+td{
+	padding: 5% 5%;
+}
+
+a:link{
+	color: orangered;
+}
+a:visited{
+	color: whitesmoke;
+}
+a:hover{
+	color: red;
+	font-weight: bolder;
+}

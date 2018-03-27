@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* Name: Justin Dowell
+	Date: 03/06/2017*/
+
+	body{
+		background-image: url(images/spiralbound.jpg);
+		background-repeat: repeat-y;
+		background-color: gainsboro;
+		font-size: 1.2em;
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		margin-left: 8em;
+		line-height: 1.25em;
+	}
+	img{
+		float: right;
+		margin: 0 0 10px 10px;
+	}
+	h1{
+		margin-top: .5em;
+		text-align: center;
+		font-size: 3em;
+		padding-bottom: 10px;
+	}
+	h2{
+		background-image: url(images/grey_texture.jpg);
+		text-align: center;
+		color: white;
+		font-size: 1.4em;
+		padding: 10px;
+	}
+	h3{
+		color: teal;
+		font-size: 1.3em;
+		text-decoration: overline underline;
+	}
+	footer{
+		text-align: center;
+		color: white;
+		background-color: black;
+		float: right;
+		padding: 10px;
+		text-transform: uppercase;
+	}
+	p.border{
+		border: solid teal .4em;
+		padding-top: .4em;
+		font-weight: bold;
+		font-style: italic;
+		color: teal;
+		margin-bottom: 0;
+	}
+	ul li{
+
+		list-style: none;
+		padding: 0 0 .25em 2 em;
+		margin: 1 0 0 1;
+		list-style-image: url(images/teal_square_bullet.jpg);
+		line-height: 1.5em;
+		
+	}

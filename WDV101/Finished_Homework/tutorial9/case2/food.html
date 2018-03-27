@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!--
+    Tutorial 9, Case 2
+    Your Name: Justin Dowell
+    Today's Date: 04/10/2017
+
+  -->
+
+<script src="modernizr-2.js"></script>
+<title>Onloin Meats and Poultry Order Form</title>
+
+<link rel="stylesheet" href="foodstyles.css" type="text/css" />
+
+<style type="text/css">
+	#container{
+		margin: 1em;
+		padding: .5em;
+		background-color: #C9C3B5;
+		font-size: 16px;
+	}
+	form{
+		margin: 0;
+		padding: .5em;
+		clear: both;
+	}
+	label{
+		width: 180px;
+		margin: 0px 15px 0px 4px;
+		color: black;
+		float: left;
+		text-align: right;
+	}
+	legend{
+		padding-top: 0;
+		padding-bottom: 10px;
+		color: #354660;
+		font-weight: bold;
+	}
+	fieldset{
+		width: 80%;
+		margin: 1em;
+		border: solid 5px #354660;
+		padding: .5em;
+		background-color: #e9edda;
+	}
+	input.button{
+		margin-top: 5em;
+		border: solid thin black;
+		color: black;
+		background-color: yellow;
+		font-weight: bold;
+		display: inline;
+	}
+	input{
+		display: block;
+	}
+</style>
+</head>
+
+<body>
+
+<section id="container">
+
+<header>
+<p><img src="images/foodlogo.jpg" alt="image of Onloin foods logo" /></p>
+</header>
+
+<section id="info">
+<h3>Get Onloin Online</h3>
+<p>We have the finest foods available anywhere. We will ship to your home or business within the continental United States and Canada. With our express shipping, you will get your order the next day. Our customers have been shopping with us since 1995.</p>
+
+<p>We have more than 50 years' experience in the restaurant and food business. We know fresh and we know quality, and we can give you both online and delivered right to your doorstep.</p>
+
+<p>Fill out the form at right and become one of our customers today. You'll receive e-mail alerts whenever we have a special sale. Save big each month on all our food products.</p>
+
+<p>Sign up now for automated ordering. We'll ship you the foods you want each month, and we'll do so at a discount to you, our best customers.</p>
+
+<p>You won't have to fill out orders anymore with our automated ordering. Get the finest and freshest foods delivered without any delay.</p>
+
+<p>Get OnLoin now!</p>
+</section> <!-- end info -->
+
+<section id="order">
+
+<form name="purchases" method="post" action="formHandler.php">
+
+<p>Password (optional). By providing a password, you will be offered discounts on future purchases.</p>
+
+<fieldset><legend>Passwords</legend>
+
+<!-- password fields are below -->
+<label for="password">Password</label>
+<input type="password" name="password" id="password" size="10" maxlength="10"/>
+
+<label for="password2">Confirm Password</label>
+<input type="password" name="password2" id="password2" size="10" maxlength="10"/>
+
+
+
+</fieldset> <!-- end passwords -->
+
+
+<fieldset>
+
+<!-- first checkbox is below -->
+
+<label for="shipping">Check if billing and shipping address are the same.</label>
+<input type="radio" name="shipping" id="shipping"/>
+</fieldset> 
+
+  
+  <fieldset><legend>Title</legend>
+
+<!-- selection list is below -->
+    <select name="title" id="title">
+    	<option value="no">(No title)</option>
+    	<option value="mr">Mr.</option>
+    	<option value="mrs">Mrs.</option>
+    	<option value="ms">Ms.</option>
+    </select>
+  
+  </fieldset>
+
+
+
+
+<fieldset><legend>Personal Information</legend>
+
+<!-- text boxes are below -->
+<label for="first_name">First Name</label>
+<input type="text" name="first_name" id="first_name" size="15"/>
+
+<label for="last_name">Last Name</label>
+<input type="text" name="last_name" id="last_name" size="20"/>
+
+<label for="telephone">Phone</label>
+<input type="text" name="telephone" id="telephone" size="12" maxlength="12"/>
+
+<label for="address1">Address Line 1</label>
+<input type="text" name="address1" id="address1" size="20"/>
+
+<label for="address2">Address line 2</label>
+<input type="text" name="address2" id="address2" size="20"/>
+
+<label for="city">City</label>
+<input type="text" name="city" id="city" size="20"/>
+
+<label for="state">State</label>
+<input type="text" name="state" id="state" size="2" maxlength="2"/>
+
+<label for="zip">Zip Code</label>
+<input type="text" name="zip" id="zip" size="5" maxlength="5"/>
+
+
+</fieldset>
+
+
+
+
+<!-- second checkbox is below -->
+<label for="offers">I would like to recieve special offers via email.</label>
+<input type="radio" name="offers" id="offers" checked/>
+
+<!-- input buttons are below -->
+
+	<input type="submit" value="Submit Your Order" class="button"/>
+	<input type="reset" value="Reset" class="button"/>
+
+
+</form>
+
+</section> <!-- end order -->
+
+<footer>
+<p><a href="#">Service</a> | <a href="#"> Gift Center </a> | <a href="#">Contact Us</a> | <a href="#"> Order Tracking </a></p>
+<p>Prefer to phone in your order? Call 1-877 ONL-FOOD</p>
+</footer> <!-- end footer -->
+
+</section> <!-- end container -->
+
+</body>
+</html>

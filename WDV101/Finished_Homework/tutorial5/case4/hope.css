@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* Name: Justin Dowell
+	Date:03/06/2017*/
+
+	#container{
+		width: 930px;
+		margin: 0 auto;
+		border: 2px solid black;
+		background-color: yellow;
+		box-shadow: 25px 25px 15px rgba(0, 0, 0, .5);
+	}
+		header{
+		background-color: orange;
+		padding: 10px;
+		text-align: center;
+		border-bottom: 2px red dotted;
+		margin-bottom: 5px;
+	}
+	nav{
+		padding: 10px;
+		background-color: black;
+		color: white;
+	}
+	aside{
+		width: 200px;
+		padding: 10px;
+		background-color: pink;
+		height: 400px;
+		float: left;
+		margin-right: 25px;
+		border-right: 2px red dotted;
+	}
+	main{
+		width: 663px;
+		padding: 10px;
+		background-color: aqua;
+		float: right;
+		font-size: 15px;
+	}
+		footer{
+		padding: 10px;
+		background-color: green;
+		color: white;
+		clear: both;
+		height: 50px;
+	}
+	p{
+		padding-bottom: 10px;
+	}
+	body{
+		font-size: 10px;
+		font-family: times Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+		color: green;
+		background-color: orange;
+		background-image: url(images/turbulent-blue-patterns-2/turbulent-blue-patterns-2.jpg);
+		float: left;
+	}
