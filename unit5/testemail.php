@@ -1,7 +1,7 @@
 <?php
 
 
-	include 'Emailer.php';
+	include 'emailer.php';
 	
 	$newEmail = new Emailer(); //instantiate a new object/variable
 
@@ -23,9 +23,9 @@
 		
 	echo "<br><br>";
 
-	$newEmail->setSentFrom("justin@justindowell.net");
+	$newEmail->setSentFrom("test@justindowell.net");
 	
-	echo $newEmail->getSentFrom();
+	echo $newEmail->getSentFrom("test@justindowell.net");
 	
 	$newEmail->sendEmail();
 

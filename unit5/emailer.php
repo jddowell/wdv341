@@ -25,8 +25,7 @@ class Emailer {
 	
 	public function setEmailSubject($inEmailSubject)
 	{
-		$this->emailSubject = $inEmailSubject;
-	}
+		$this->emailSubject = $inEmailSubject;	}
 	
 	public function setEmailMsg($inEmailMsg)
 	{
