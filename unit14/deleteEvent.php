@@ -6,9 +6,18 @@
 	<?php
 	include 'connect.php';
 	$deleteVariable = $_GET['eventId'];
+	if($deleteVariable == $deleteVariable)
+	{
 		$stmt = $conn->prepare("DELETE FROM wdv341_event WHERE event_id = '$deleteVariable'");
-		echo "Record Event Id Was Deleted:".$deleteVariable;
+		echo "<br>";
+		echo "<h1>"."Record Event Id Was Deleted: ".$deleteVariable."</h1>";
 		$stmt->execute();
+	}
+	else
+	{
+		echo "<h1>Record was not deleted!</h1>";
+	}
+		
 	?>
 </head>
 
