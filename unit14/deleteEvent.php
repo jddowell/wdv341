@@ -5,8 +5,10 @@
 <title>Untitled Document</title>
 	<?php
 	include 'connect.php';
-		$recId = $_GET['event_id'];
-		$stmt = $conn->prepare("DELETE From event_table WHERE event_id=?");
+	$deleteVariable = $_GET['eventId'];
+		$stmt = $conn->prepare("DELETE FROM wdv341_event WHERE event_id = '$deleteVariable'");
+		echo "Record Event Id Was Deleted:".$deleteVariable;
+		$stmt->execute();
 	?>
 </head>
 
