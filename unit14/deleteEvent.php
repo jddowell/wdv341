@@ -12,6 +12,8 @@
 		echo "<br>";
 		echo "<h1>"."Record Event Id Was Deleted: ".$deleteVariable."</h1>";
 		$stmt->execute();
+		header("Location: select.php");
+		
 	}
 	else
 	{
