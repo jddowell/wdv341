@@ -20,7 +20,7 @@
 			
 			    // prepare sql and bind parameters
     		$stmt = $conn->prepare("SELECT * FROM event_user_table");
-			
+			//$stmt = $conn->prepare("SELECT * FROM wdv341_event");
 			//while($row = $stmt->bindParam(PD))
     		//$stmt->bindParam(':event_name', $event_name);
     		//$stmt->bindParam(':event_description', $event_description);
