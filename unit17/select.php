@@ -5,6 +5,11 @@
 <title>Untitled Document</title>
 	<?php
 	include 'connect.php';
+	session_start();
+	if($_SESSION["valid_user"] = false)
+	{
+		header("Location: login.php");
+	}
 		$stmt = $conn->prepare("SELECT * FROM wdv341_event");
 		$stmt->execute();
 	?>

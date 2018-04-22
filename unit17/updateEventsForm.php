@@ -4,6 +4,11 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 	<?php
+	session_start();
+	if($_SESSION["valid_user"] = false)
+	{
+		header("Location: login.php");
+	}
 	include 'connect.php';
 	
 	//Setting up the variables
